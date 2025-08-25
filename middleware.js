@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
+import { createMiddlewareClient } from "@supabase/ssr";
 
 export async function middleware(req) {
   if (!req.nextUrl.pathname.startsWith("/admin")) return NextResponse.next();
